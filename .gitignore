@@ -22,4 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.env
+firebasekey.js
+jwt.js
+mongo.js
