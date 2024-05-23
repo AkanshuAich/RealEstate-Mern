@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
-import JWT_SECRET from '../../jwt.js';
 import { errorHandler } from './error.js';
+
+const JWT_SECRET = '1234567akan';
 
 export const verifyToken = (req, res, next) => {
   const token = req.cookies.access_token;
