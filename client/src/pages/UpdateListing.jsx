@@ -214,7 +214,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'sale'}
               />
-              <span>Sell</span>
+              <span className='text-[#ffffff]'>Sell</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -224,7 +224,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.type === 'rent'}
               />
-              <span>Rent</span>
+              <span className='text-[#ffffff]'>Rent</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -234,7 +234,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.parking}
               />
-              <span>Parking spot</span>
+              <span className='text-[#ffffff]'>Parking spot</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -244,7 +244,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.furnished}
               />
-              <span>Furnished</span>
+              <span className='text-[#ffffff]'>Furnished</span>
             </div>
             <div className='flex gap-2'>
               <input
@@ -254,7 +254,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 checked={formData.offer}
               />
-              <span>Offer</span>
+              <span className='text-[#ffffff]'>Offer</span>
             </div>
           </div>
           <div className='flex flex-wrap gap-6'>
@@ -269,7 +269,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bedrooms}
               />
-              <p>Beds</p>
+              <p className='text-[#ffffff]'>Beds</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -282,7 +282,7 @@ export default function CreateListing() {
                 onChange={handleChange}
                 value={formData.bathrooms}
               />
-              <p>Baths</p>
+              <p className='text-[#ffffff]'>Baths</p>
             </div>
             <div className='flex items-center gap-2'>
               <input
@@ -296,9 +296,9 @@ export default function CreateListing() {
                 value={formData.regularPrice}
               />
               <div className='flex flex-col items-center'>
-                <p>Regular price</p>
+                <p className='text-[#ffffff]'>Regular price</p>
                 {formData.type === 'rent' && (
-                  <span className='text-xs'>($ / month)</span>
+                  <span className='text-xs text-[#ffffff]'>($ / month)</span>
                 )}
               </div>
             </div>
@@ -315,9 +315,9 @@ export default function CreateListing() {
                   value={formData.discountPrice}
                 />
                 <div className='flex flex-col items-center'>
-                  <p>Discounted price</p>
+                  <p className='text-[#ffffff]'>Discounted price</p>
                   {formData.type === 'rent' && (
-                    <span className='text-xs'>($ / month)</span>
+                    <span className='text-xs text-[#ffffff]'>($ / month)</span>
                   )}
                 </div>
               </div>
@@ -325,9 +325,9 @@ export default function CreateListing() {
           </div>
         </div>
         <div className='flex flex-col flex-1 gap-4'>
-          <p className='font-semibold'>
+          <p className='font-semibold text-[#ffffff]'>
             Images:
-            <span className='font-normal text-gray-600 ml-2'>
+            <span className='font-normal text-[#eb5a5a] ml-2'>
               The first image will be the cover (max 6)
             </span>
           </p>
@@ -344,12 +344,12 @@ export default function CreateListing() {
               type='button'
               disabled={uploading}
               onClick={handleImageSubmit}
-              className='p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80'
+              className='p-3 text-[#9BCF53] border border-[#9BCF53] rounded uppercase hover:shadow-lg disabled:opacity-80'
             >
               {uploading ? 'Uploading...' : 'Upload'}
             </button>
           </div>
-          <p className='text-red-700 text-sm'>
+          <p className='text-[#eb5a5a] text-sm'>
             {imageUploadError && imageUploadError}
           </p>
           {formData.imageUrls.length > 0 &&
@@ -366,7 +366,7 @@ export default function CreateListing() {
                 <button
                   type='button'
                   onClick={() => handleRemoveImage(index)}
-                  className='p-3 text-red-700 rounded-lg uppercase hover:opacity-75'
+                  className='p-3 text-[#eb5a5a] rounded-lg uppercase hover:opacity-75'
                 >
                   Delete
                 </button>
@@ -374,11 +374,11 @@ export default function CreateListing() {
             ))}
           <button
             disabled={loading || uploading}
-            className='p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
+            className='p-3 bg-[#568bab] hover:bg-[#324b8b] text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
           >
             {loading ? 'Updating...' : 'Update listing'}
           </button>
-          {error && <p className='text-red-700 text-sm'>{error}</p>}
+          {error && <p className='text-[#eb5a5a] text-sm'>{error}</p>}
         </div>
       </form>
     </main>

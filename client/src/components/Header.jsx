@@ -65,7 +65,7 @@ export default function Header() {
                 alt='profile'
               />
             ) : (
-              <li className=' text-slate-700 hover:underline'> Sign in</li>
+              <li className='w-36 text-s sm:text-sm text-center text-[#ffffff] bg-[#568bab] hover:bg-[#324b8b] px-10 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-0'> Sign in</li>
             )}
           </Link>
         </ul>
